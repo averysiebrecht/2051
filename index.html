@@ -1,0 +1,88 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - 2051</title>
+  
+  
+  
+  
+<style>
+h3 {text-align: center;}
+
+body {
+  background-color: pink;
+}
+
+.correct {
+  background: green;
+}
+
+.incorrect{
+  background: red;
+}
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+  <h3>Avery's French Quiz  </h3>
+
+
+<ol>
+  <li>parler <input  data-correct="to talk"/></li>
+  <li>marcher <input  data-correct="to walk"/></li>
+  <li>jouer <input data-correct="to play"/></li>
+  <li>parler <input  data-correct="to talk"/></li>
+  <li>manger <input  data-correct="to eat"/></li>
+  <li>faire <input  data-correct="to make"/></li>
+  <li>aller <input  data-correct="to go"/></li>
+  <li>soif <input  data-correct="thirsty"/></li>
+  <li>faim <input  data-correct="hungry"/></li>
+  <li>chaud <input  data-correct="hot"/></li>
+ 
+</ol>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  
+      <script id="rendered-js" >
+console.clear();
+
+$("input").change(onChange)
+
+function onChange(evt){
+  let correct = $(this).data("correct");
+  let response = $(this).val();
+  console.log(correct,response);
+  if(correct == response){
+   $(this).removeClass('incorrect').addClass('correct');
+  } else{
+    $(this).removeClass('correct').addClass('incorrect');
+  }
+}
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
